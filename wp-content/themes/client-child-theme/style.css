@@ -47,6 +47,9 @@ label img {
 	box-shadow: 0 0 6px #444;
 }
 
+.question {
+	display: none;
+}
 
 input[type="radio"] {
 	float: left;
