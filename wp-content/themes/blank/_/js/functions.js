@@ -1,13 +1,15 @@
 // remap jQuery to $
-(function($){})(window.jQuery);
+(function($){
+
+	$(document).ready(function() {
+		$('.question-options').on('click', 'label', function(e) {
+			var imgSrc = $(this).children('img').attr('src');
+			$('#selectedImage').val(imgSrc);
+		});
+	});
 
 
-/* trigger when page is ready */
-$(document).ready(function (){
-
-	// your functions go here
-
-});
+})(window.jQuery);
 
 
 /* optional triggers
@@ -21,3 +23,5 @@ $(window).resize(function() {
 });
 
 */
+
+

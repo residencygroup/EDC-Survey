@@ -1,3 +1,4 @@
+<img src="../blank/_/img/header.png" alt="" id="header">
 <div class="survey">
 <form action="<?php the_permalink(); ?>" method="POST">
 
@@ -13,6 +14,7 @@
 	while ( $the_query->have_posts() ) : $the_query->the_post();
 ?>
 	<input type="hidden" name="questionID" value="<?php echo $post_id; ?>" />
+	<input type="hidden" name="selectedImage" id="selectedImage" />
 	<div class="question"><?php the_title(); ?></div>
 
 <?php foreach ($more_fields as $key => $value) {
