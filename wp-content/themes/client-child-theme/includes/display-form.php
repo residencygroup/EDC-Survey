@@ -31,7 +31,7 @@
 	</div>
 	
 <?php endif; } ?>
-	<input type="submit" value="Vote" name="vote" />
+	<input type="submit" value="Vote" name="vote" id="submit" />
 </form>
 
 <?php endwhile;
