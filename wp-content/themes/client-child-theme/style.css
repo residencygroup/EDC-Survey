@@ -22,13 +22,17 @@ body {
 	background: url('../blank/_/img/background.jpg') #000 no-repeat;
 }
 
+#header {
+
+}
+
 .survey {
 	width: 700px;
 	margin: auto;
 }
 
 form {
-	margin: 360px 0 0 0;
+	margin: 0 0 0 0;
 }
 
 label {
@@ -71,7 +75,6 @@ label span {
 	height: 224px;
 	display: block;
 	margin: 0px 13px 26px 13px;
-
 }
 
 input#submit {
@@ -87,4 +90,43 @@ input#submit {
 	margin: 0px 0px 26px 277px;
 	-moz-outline: none;
 	-o-outline: none;
+}
+
+@media all and (max-width: 500px) {
+	body {
+		width: 100%;
+	}
+
+	img#header {
+		width: 100%;
+	}
+
+	.survey {
+		width: 100%;
+		margin: auto;
+	}
+
+	.question-options {
+		float: none;
+		background: url('../blank/_/img/sprite.png') no-repeat -19px -21px;
+		width: 323px;
+		height: 224px;
+		display: block;
+		margin: 13px auto;
+	}
+
+	input#submit {
+		float: left;
+		display: block;
+		clear: both;
+		background: url('../blank/_/img/sprite.png') no-repeat -18px -295px;
+		width: 149px;
+		height: 37px;
+		text-indent: -9999px;
+		border: none;
+		outline: none;
+		margin: 13px auto;
+		-moz-outline: none;
+		-o-outline: none;
+	}
 }
