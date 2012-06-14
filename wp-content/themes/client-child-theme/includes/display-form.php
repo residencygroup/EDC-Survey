@@ -9,14 +9,10 @@
 	);
 	$the_query = new WP_Query($args);
 	$post_id = $the_query->posts[0]->ID;
-	//print_r($the_query->posts[0]->ID);
-	//print_r($the_query);
-	//print_r(get_post_meta($post_id));
-	//print_r(get_post_custom($post_id));
-	$more_fields = get_post_custom($post_id);
+   	$more_fields = get_post_custom($post_id);
 	while ( $the_query->have_posts() ) : $the_query->the_post();
 ?>
-
+	<input type="hidden" name="questionID" value="<?php echo $post_id; ?>" />
 	<div class="question"><?php the_title(); ?></div>
 
 <?php foreach ($more_fields as $key => $value) {

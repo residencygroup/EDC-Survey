@@ -9,6 +9,7 @@
 <?php
 	if(isset($_POST['vote'])) {
 		//store info in db
+		require('includes/survey.php');
 		require('includes/process-submit.php');
 	}
 	else {
