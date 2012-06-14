@@ -9,3 +9,80 @@ Version: 0.1
 */
 
 @import url('../blank/style.css');
+
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 810px;
+	margin: 0;
+	padding: 0;
+	background: url('../blank/_/img/background.jpg') #000 no-repeat;
+}
+
+.survey {
+	width: 700px;
+	margin: auto;
+}
+
+form {
+	margin: 360px 0 0 0;
+}
+
+label {
+	display: block;
+	width: 272px;
+	height: auto;
+	margin: auto;
+}
+
+label img {
+	width: 272px;
+	height: 134px;
+	border: solid 3px #0cbdef;
+	margin: 15px auto 0px auto;
+	-webkit-box-shadow: 0 0 4px #444;
+	box-shadow: 0 0 6px #444;
+}
+
+
+input[type="radio"] {
+	float: left;
+	display: block;
+	margin: 10px;
+}
+
+label span {
+	display: block;
+	font-size: 17px;
+	color: #FFF;
+	padding: 8px 0 0px 0;
+}
+
+.question-options {
+	float: left;
+	background: url('../blank/_/img/sprite.png') no-repeat -19px -21px;
+	width: 323px;
+	height: 224px;
+	display: block;
+	margin: 0px 13px 26px 13px;
+
+}
+
+input#submit {
+	float: left;
+	display: block;
+	clear: both;
+	background: url('../blank/_/img/sprite.png') no-repeat -18px -295px;
+	width: 149px;
+	height: 37px;
+	text-indent: -9999px;
+	border: none;
+	outline: none;
+	margin: 0px 0px 26px 277px;
+	-webkit-outline: none;
+	-moz-outline: none;
+	-o-outline: none;
+}
