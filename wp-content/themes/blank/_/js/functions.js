@@ -1,13 +1,38 @@
 // remap jQuery to $
-(function($){
+(function($) {
+
+	FB.init({
+		appId: "404230696296293",
+		status: true,
+		cookie: true
+	});
+
+	function postToFeed(obj) {
+		function callback(response) {}
+		FB.ui(obj, callback);
+	}
 
 	$(document).ready(function() {
+		var answer = '';
+
 		$('.question-options').on('click', 'label', function(e) {
 			var imgSrc = $(this).children('img').attr('src');
 			$('#selectedImage').val(imgSrc);
 		});
-	});
 
+		if(document.getElementById('thankyou')) {
+			answer = $('#answer').text();
+			postToFeed({
+				method: 'feed',
+				link: RG.permalink,
+				picture: document.getElementById('selectedImage').src,
+				name: '', //question,
+				caption: answer,
+				description: answer + ' was the best ride at EDC.'
+			});
+		}
+
+	});
 
 })(window.jQuery);
 
@@ -23,5 +48,3 @@ $(window).resize(function() {
 });
 
 */
-
-

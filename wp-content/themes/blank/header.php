@@ -106,4 +106,5 @@
 </head>
 
 <body <?php body_class(); ?>>
-
+	<div id='fb-root'></div>
+    <script src='http://connect.facebook.net/en_US/all.js'></script>
