@@ -1,18 +1,6 @@
-<img src="../blank/_/img/header.png" alt="" id="header">
+<img src="<?php echo site_url() ?>/wp-content/uploads/<?php echo $banner; ?>" alt="" id="header" />
 <div class="survey">
 <form action="<?php the_permalink(); ?>" method="POST">
-
-<?php
-	$args = array(
-		'post_status' => 'publish',
-		'category_name' => 'questions',
-		'posts_per_page' => 1
-	);
-	$the_query = new WP_Query($args);
-	$post_id = $the_query->posts[0]->ID;
-   	$more_fields = get_post_custom($post_id);
-	while ( $the_query->have_posts() ) : $the_query->the_post();
-?>
 	<input type="hidden" name="questionID" value="<?php echo $post_id; ?>" />
 	<input type="hidden" name="selectedImage" id="selectedImage" />
 	<div class="question"><?php the_title(); ?></div>
@@ -36,7 +24,4 @@
 	<input type="submit" value="Vote" name="vote" id="submit" />
 </form>
 
-<?php endwhile;
-	wp_reset_postdata();
-?>
 </div>
