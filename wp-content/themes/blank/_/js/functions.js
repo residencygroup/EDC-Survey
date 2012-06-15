@@ -8,10 +8,7 @@
 	});
 
 	function postToFeed(obj) {
-		function callback(response) {
-			document.getElementById('msg').innerHTML = "Post ID: " + response['post_id'];
-		}
-
+		function callback(response) {}
 		FB.ui(obj, callback);
 	}
 
@@ -27,11 +24,11 @@
 			answer = $('#answer').text();
 			postToFeed({
 				method: 'feed',
-				link: 'https://residencygroup.com/',
+				link: RG.permalink,
 				picture: document.getElementById('selectedImage').src,
 				name: '', //question,
 				caption: answer,
-				description: 'I liked ' + answer + ' at EDC Las Vegas 2012. What was your favorite?'
+				description: answer + ' was the best ride at EDC.'
 			});
 		}
 

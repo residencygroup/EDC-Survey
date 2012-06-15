@@ -18,3 +18,8 @@
 	<?php endif; ?>
 <?php endif; ?>
 </div>
+
+<script>
+	var RG = RG || {};
+	RG.permalink = '<?php the_permalink(); ?>';
+</script>
