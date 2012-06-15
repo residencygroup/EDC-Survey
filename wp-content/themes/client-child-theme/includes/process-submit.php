@@ -9,7 +9,7 @@
 	$addVoteResult = $survey->addVote($questionID, $answer);
 	if ($addVoteResult) : ?>
 		<div class="thankyou" id="thankyou">Thank you for your vote</div>
-		<div>
+		<div class="userdata">
 			<div class="answer" id="answer"><?php echo $answer; ?></div>
 			<img src="<?php echo $selectedImage; ?>" id="selectedImage" />
 		</div>
