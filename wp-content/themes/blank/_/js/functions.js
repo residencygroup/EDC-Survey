@@ -14,6 +14,7 @@
 
 	$(document).ready(function() {
 		var answer = '';
+		var fieldSelectedImage = document.getElementById('selectedImage');
 
 		$('.question-options').on('click', 'label', function(e) {
 			var imgSrc = $(this).children('img').attr('src');
@@ -32,6 +33,9 @@
 			});
 		}
 
+		if(fieldSelectedImage) {
+			fieldSelectedImage.value = $('.question-options').filter(':first').find('img').attr('src');
+		}
 	});
 
 })(window.jQuery);
