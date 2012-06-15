@@ -118,7 +118,7 @@ input#submit {
 .userdata {
 	width: 400px;
 	display: block;
-	margin: auto;
+	margin: 0px auto 40px auto;
 }
 
 #selectedImage {
